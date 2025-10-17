@@ -1,4 +1,4 @@
- function navbar(){
+ function page(){
     return(
 <div>
   {/* Navbar with Mega Menu */}
@@ -140,4 +140,4 @@
 
     )
  }
- export  default navbar
+ export  default page
