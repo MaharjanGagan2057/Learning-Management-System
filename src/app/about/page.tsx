@@ -1,9 +1,11 @@
 import React from 'react'
-import navbar from '../navbar/page'
+import Navbar from '../navbar/page'
 
 const page = () => {
   return (
-    
+  
+<>
+<Navbar/>
   
 <div className="sm:flex items-center max-w-screen-xl ">
   <div className="sm:w-1/2 p-10">
@@ -24,7 +26,7 @@ const page = () => {
     </div>
   </div>
 </div>
-
+    </>
   )
 }
 

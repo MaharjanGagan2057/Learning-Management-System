@@ -1,4 +1,8 @@
- function page(){
+ import Link from "next/link"
+import home from "../home/page"
+import contact from "../contact/page"
+import about from "../about/page"
+ function Navbar(){
     return(
 <div>
   {/* Navbar with Mega Menu */}
@@ -12,7 +16,7 @@
           </div>
           <div className="hidden sm:block sm:ml-6">
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <Link href="/home" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
               {/* Products Dropdown Trigger */}
               <div className="relative group">
                 <button className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium flex items-center">
@@ -58,8 +62,8 @@
                 </div>
               </div>
               <a href="#" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-              <a href="#" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">About</a>
-              <a href="#" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              <Link href="about/" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+              <Link href="contact/" className="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
             </div>
           </div>
         </div>
@@ -128,16 +132,9 @@
       </div>
     </div>
   </nav>
-  Page content
-  <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-    <div className="px-4 py-6 sm:px-0">
-      <div className="border-4 border-dashed border-gray-200 rounded-lg h-96 flex items-center justify-center">
-        <p className="text-gray-500 text-xl">Page Content Goes Here</p>
-      </div>
-    </div>
-  </div>
+
 </div>
 
     )
  }
- export  default page
+ export  default Navbar

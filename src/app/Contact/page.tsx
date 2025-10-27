@@ -1,7 +1,10 @@
+import Navbar from "../navbar/page"
 
 
 function contact ()  {
   return (
+    <>
+  <Navbar/>
    <section className="bg-white dark:bg-slate-800 " id="contact">
   <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
     <div className="mb-4">
@@ -75,6 +78,7 @@ function contact ()  {
         </div>
         <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
           <h2 className="mb-4 text-2xl font-bold dark:text-white">Ready to Get Started?</h2>
+          
           {/* This form tag uses the Fabform.io service as its form backend to handle form submissions. 
      The "action" attribute specifies the endpoint URL provided by Fabform.io, where form data 
      will be sent using the POST method. */}
@@ -101,7 +105,7 @@ function contact ()  {
     </div>
   </div>
 </section>
-
+    </>
   )
 }
 

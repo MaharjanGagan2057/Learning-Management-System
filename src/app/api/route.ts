@@ -11,8 +11,13 @@ import User from "@/database/models/user.schema";
         googleid : "6589564562154568"
     })
 
+    
+
     return Response.json({
         message :"you hit api route"
-    })
+    },
+    {status :200}
+
+)
     
  }
