@@ -10,9 +10,9 @@ function home(){
     if(session){
         return(
 //  google integration for logout code
-            <>
-            <Image src={session.user?.image || "mero-profile.png"} alt="profile picture" width={80} height={80} /> 
-        <h1>Welcome,{session.user?.name}</h1> 
+            < >
+            <Image src={session.user?.image  || "mero-profile.png"} alt="profile picture"   width={80} height={80}  /> 
+        <h1  >Welcome,{session.user?.name}</h1> 
         <h3>{session.user?.email}</h3>
         <button onClick={()=>signOut()}>Sign Out</button>
         </>

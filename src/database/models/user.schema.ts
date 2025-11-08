@@ -2,29 +2,42 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema
 
+enum Role{
+    student ="student",
+    Admin ="admin"
+}
 
-const userSchema = new Schema({
-
-
-    useername :{
-        type : String
+interface IUser extends Document{
+    username : string,
+    profileImage :string,
+    email : string,
+    role : Role
+}
+const userSchema = new Schema<IUser>({
+    username :{
+        type : String,
+        required :true
     },
 
     email : {
-        type :String
+        type :String,
+        required : true
+    },
+    
+    role :{
+        type :String,
+        enum :[Role.student,Role.Admin],
+        default : Role.student
     },
 
-    googleid :{
-        type : String
-    },
 
-    profileimage : {
-        type : String 
+    profileImage : {
+        type : String,
 
     }
 
 })
 
 
- const User = mongoose.model("User",userSchema)
+ const User = mongoose.models.User|| mongoose.model("User",userSchema)
  export default User
