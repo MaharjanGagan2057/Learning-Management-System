@@ -1,12 +1,12 @@
 import mongoose,{Schema} from "mongoose"; 
 
-interface ICatagory extends Document{
+interface ICategory extends Document{
 
     name :string, 
     description?: string,
     createdAt : Date
 }
-const catagorySchema= new Schema<ICatagory>({
+const catagorySchema= new Schema<ICategory>({
     
         name :{
         type :String,
