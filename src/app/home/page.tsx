@@ -6,6 +6,8 @@ import Image from "next/image";
 
 
 function home(){
+<Navbar/>
+
     const {data:session} =useSession()
     if(session){
         return(

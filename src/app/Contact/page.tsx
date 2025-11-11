@@ -1,7 +1,8 @@
+import { useSearchParams } from "next/navigation"
 import Navbar from "../navbar/page"
+import { useState } from "react"
 
-
-function contact ()  {
+const contact =() => {
   return (
     <>
   <Navbar/>

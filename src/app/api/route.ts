@@ -2,6 +2,7 @@ import dbConnect from "@/database/connection";
 import User from "@/database/models/user.schema";
 
  
+//  GET method for api route
  export async function GET(){
     dbConnect()
 
