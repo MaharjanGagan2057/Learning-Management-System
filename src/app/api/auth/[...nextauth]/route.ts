@@ -3,7 +3,7 @@ import dbConnect from "@/database/connection";
 import User from "@/database/models/user.schema";
 import NextAuth, {Session,AuthOptions} from "next-auth";
 import GoogleProvider from "next-auth/providers/google"
-i
+
 
 
 // NextAuth configuration

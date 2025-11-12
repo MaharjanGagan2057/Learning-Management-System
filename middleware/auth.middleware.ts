@@ -11,7 +11,8 @@ import { NextRequest, NextResponse } from "next/server"
 
     // If no session exists, return unauthorized
    if(!session || session.user.role !== Role.Admin){
-    return  Response.json({message : "Unauthorized,you dont have permision for this action"}, {status :401})
+    return  Response.json({message : "Unauthorized,you dont have permision for this action"},
+       {status :401})
    } 
 
    return NextResponse.next()
